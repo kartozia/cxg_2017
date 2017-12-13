@@ -2,7 +2,7 @@
 ### Картозия Инга, БКЛ141
 
 ### Материалы
-[Ссылка на таблицу с данными](https://docs.google.com/spreadsheets/d/1YzsQ54jS8KjaMXv7DyNbsjPLHnqM_lu-34sUv73d2io/edit?usp=sharing)  
+[Ссылка на таблицу с данными](https://docs.google.com/spreadsheets/d/1ZZ1vR18t06Hndg9rw2yg-Zq1cj4ARs92kGAvCdYkFgU/edit?usp=sharing)  
 [Ссылка на код, здесь целиком с комментарием](https://github.com/...) (TBA)
 
 ## Рабочая гипотеза
