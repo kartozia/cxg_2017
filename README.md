@@ -111,6 +111,7 @@ Number of Fisher Scoring iterations: 6
 ## Обсуждение использованных квантитативных методов
 
 ### Goodness of fit
+
 `
 Likelihood ratio test
 
@@ -122,3 +123,4 @@ Model 2: Target ~ AdvTime + AdvLoc + VGram + Neg + Adj + Phrasal
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 `
+
