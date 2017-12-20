@@ -112,7 +112,7 @@ Number of Fisher Scoring iterations: 6
 
 ### Goodness of fit
 
-`
+```
 Likelihood ratio test
 
 Model 1: Target ~ AdvLoc + Adj + Phrasal
@@ -122,5 +122,5 @@ Model 2: Target ~ AdvTime + AdvLoc + VGram + Neg + Adj + Phrasal
 2  15 -957.82 11 52.322  2.384e-07 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-`
+```
 
