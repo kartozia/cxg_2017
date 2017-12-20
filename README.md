@@ -26,7 +26,7 @@
 ## Мультифакторный анализ 
 * логистическая регрессия (привести примеры нескольких моделей, закончив оптимальной, в которой остаются только значимые факторы)  
 **Out model**
-glm(formula = Target ~ AdvLoc + Adj + Phrasal, family = "binomial", 
+```glm(formula = Target ~ AdvLoc + Adj + Phrasal, family = "binomial", 
     data = df3)
 
 Deviance Residuals: 
@@ -49,6 +49,7 @@ Residual deviance: 2017.0  on 2005  degrees of freedom
 AIC: 2025
 
 Number of Fisher Scoring iterations: 6
+```
 
 Требуется показать output модели и привести графики
 
