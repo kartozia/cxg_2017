@@ -5,17 +5,29 @@ summary(fit)
 
 #logit regression with categorial variable
 df2 <- read.csv('/Users/Kartozianstvo/Desktop/вышечка/cxg_2017/data_viz.csv', sep=',')
-fit <- glm(Target ~ AdvTime+AdvLoc+VGram+Neg+Adj+Phrasal, data = df2, family = "binomial") 
-summary(fit)
+fit1 <- glm(Target ~ AdvTime+AdvLoc+VGram+Neg+Adj+Phrasal, data = df2, family = "binomial") 
+summary(fit1)
 
+#final
 df3 <- read.csv('/Users/Kartozianstvo/Desktop/вышечка/cxg_2017/data_sign.csv', sep=',')
-fit <- glm(Target ~ AdvLoc+Adj+Phrasal, data = df3, family = "binomial") 
-summary(fit)
+fit2 <- glm(Target ~ AdvLoc+Adj+Phrasal, data = df3, family = "binomial") 
+summary(fit2)
 
-# Predict 
+1-logLik(fit)/logLik(fit1)
+# Predict and vizualize
 df3$preds <- plogis( predict(fit , newdata=df3))
-#vizualization
+model <- glm(Sample ~ Temp + Age, data = dataset, family = binomial)
+newdata <- expand.grid(
+  AdvLoc = pretty(dataset$AdvLoc, 20), 
+  Adj = pretty(dataset$Adj, 5))
+newdata$Target <- predict(model, newdata = newdata, type = "response")
 library(ggplot2)
+ggplot(newdata, aes(x = AdvLoc, y = Target)) + geom_line() + facet_wrap(~Adj)
+#evaluate
+library(lmtest)
+lrtest(fit1,fit2)
+
+#vizualization
 library(magrittr)
 pl <- ggplot(df3, aes( Adj, preds, color=Target))
 pl
@@ -30,3 +42,11 @@ dt %>%
   geom_bar(stat = "identity", position = "dodge") +
   geom_text(aes(label = Freq, Freq = Freq + 0.1), position = position_dodge(0.9), vjust = 0)
 
+#correlation
+install.packages("corrplot")
+library('corrplot')
+loaddata <- read.csv('/Users/Kartozianstvo/Desktop/вышечка/cxg_2017/encode.csv', sep=',')
+df = subset(loaddata, select = -c(X) )
+corrmatr <- cor(df)
+res1 <- cor.mtest(df, conf.level = .99)
+corrplot(corrmatr, p.mat = res1$p, insig = "blank")
