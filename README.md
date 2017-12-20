@@ -3,9 +3,9 @@
 
 
 ### Материалы
-[Данные](https://docs.google.com/spreadsheets/d/1ZZ1vR18t06Hndg9rw2yg-Zq1cj4ARs92kGAvCdYkFgU/edit?usp=sharing)  
+* [Данные](https://docs.google.com/spreadsheets/d/1ZZ1vR18t06Hndg9rw2yg-Zq1cj4ARs92kGAvCdYkFgU/edit?usp=sharing)  
 
-[Код](./cxg_final.R)
+* [Код](./cxg_final.R)
 
 ## Рабочая гипотеза
 С утра vs. утром
