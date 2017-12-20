@@ -26,8 +26,8 @@
 ## Мультифакторный анализ 
 * логистическая регрессия (привести примеры нескольких моделей, закончив оптимальной, в которой остаются только значимые факторы)  
 **Out model**
-```glm(formula = Target ~ AdvLoc + Adj + Phrasal, family = "binomial", 
-    data = df3)
+```
+glm(formula = Target ~ AdvLoc + Adj + Phrasal, family = "binomial", data = df3)
 
 Deviance Residuals: 
     Min       1Q   Median       3Q      Max  
