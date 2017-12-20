@@ -12,11 +12,21 @@ df3 <- read.csv('/Users/Kartozianstvo/Desktop/вышечка/cxg_2017/data_sign.
 fit <- glm(Target ~ AdvLoc+Adj+Phrasal, data = df3, family = "binomial") 
 summary(fit)
 
+# Predict 
+df3$preds <- plogis( predict(fit , newdata=df3))
 #vizualization
 library(ggplot2)
 library(magrittr)
+pl <- ggplot(df3, aes( Adj, preds, color=Target))
+pl
 
+#analytics viz
 viz <- read.csv('/Users/Kartozianstvo/Desktop/вышечка/cxg_2017/data_viz.csv', sep=',')
-viz %>% 
-  ggplot(as.data.frame(table(df2$VGram), aes(x=tense, y=count), fill = Target)) + geom_bar(stat = "identity", position = "dodge")
+table(viz$VGram, viz$Target)
+dt <- as.data.frame(table(viz$VGram, viz$Target))
+dt
+dt %>% 
+  ggplot(aes(x=Var1, y=Freq, fill=Var2)) + 
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = Freq, Freq = Freq + 0.1), position = position_dodge(0.9), vjust = 0)
 
