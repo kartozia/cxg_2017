@@ -114,8 +114,11 @@ Min 1Q Median 3Q Max
 
 Coefficients:
 Estimate Std. Error z value Pr(>|z|)
-(Intercept) 0.96908 0.06417 15.101 AdvLoc -0.45362 0.20127 -2.254 0.0242 *
-Adj -2.84451 0.14836 -19.172 Phrasal -3.85871 0.39235 -9.835 ---
+(Intercept) 0.96908 0.06417 15.101 ***
+AdvLoc -0.45362 0.20127 -2.254 0.0242 *
+Adj -2.84451 0.14836 -19.172 ***
+Phrasal -3.85871 0.39235 -9.835 ***
+---
 Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for binomial family taken to be 1)
