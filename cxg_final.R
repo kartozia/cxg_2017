@@ -50,3 +50,9 @@ df = subset(loaddata, select = -c(X) )
 corrmatr <- cor(df)
 res1 <- cor.mtest(df, conf.level = .99)
 corrplot(corrmatr, p.mat = res1$p, insig = "blank")
+
+#chi-square
+chisq.test(loaddata$Target, loaddata$AdvLoc, correct=FALSE)
+chisq.test(loaddata$Target, loaddata$Adj, correct=FALSE)
+chisq.test(loaddata$Target, loaddata$Phrasal, correct=FALSE)
+chisq.test(loaddata$AdvLoc, loaddata$Adj, correct=FALSE)
