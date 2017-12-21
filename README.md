@@ -103,7 +103,7 @@ X-squared = 3447.3, df = 5358, p-value = 1
 
 **Model output:**
 
-'''
+```
 Call:
 glm(formula = Target ~ AdvLoc + Adj + Phrasal, family = "binomial",
 data = df3)
@@ -125,7 +125,7 @@ Residual deviance: 1968 on 2005 degrees of freedom
 AIC: 1976
 
 Number of Fisher Scoring iterations: 6
-'''
+```
 
 ## Результаты
 
@@ -135,7 +135,7 @@ Number of Fisher Scoring iterations: 6
 
 ### Goodness of fit
 
-'''
+```
 Likelihood ratio test
 
 Model 1: Target ~ AdvLoc + Adj + Phrasal
@@ -145,7 +145,8 @@ Model 2: Target ~ AdvTime + AdvLoc + VGram + Neg + Adj + Phrasal
 2 15 -957.82 11 52.322 2.384e-07 ***
 ---
 Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-'''
+```
+
 **Модель 1:** только значимые признаки
 
 **Модель 2:** все признаки
